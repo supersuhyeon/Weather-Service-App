@@ -8,7 +8,6 @@ export default function WeatherProvider({children}){
 
     const getWeatherInfo = useCallback(async ()=>{
         try{
-
             const currentWeatherInfoAPI = `https://api.openweathermap.org/data/2.5/weather?appid=${process.env.REACT_APP_WEATHER_API_KEY}&q=${countryName}&units=imperial`
             const currentWeatherInfo = await fetch(currentWeatherInfoAPI)
             const {
